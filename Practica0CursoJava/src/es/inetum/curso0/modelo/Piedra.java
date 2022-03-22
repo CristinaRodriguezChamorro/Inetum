@@ -19,9 +19,20 @@ public class Piedra extends PiedraPapelTijeraFactory {
 	@Override
 	public int comparar(PiedraPapelTijeraFactory pPiedPapelTijera) {
 		int result=0;
-		switch (pPiedPapelTijera.getNumero()) {
-		case TIJERA:	
+		switch (pPiedPapelTijera.getNumero()) {	
+		
+		case TIJERA:
+		case LAGARTO:
+			result=1;
+			this.descripcionResultado = "piedra le gana a " + pPiedPapelTijera.getNombre();
+			break;
+			
         case PAPEL:
+        case SPOCK:
+        	result=-1;
+			this.descripcionResultado = "piedra perdió con " + pPiedPapelTijera.getNombre();
+			break;
+
 		default:
 			result=0;
 			this.descripcionResultado = "piedra empata con " + pPiedPapelTijera.getNombre();

@@ -85,13 +85,13 @@ class PiedraPapelTijeraFactoryTest {
 	@Test
 	void testCompararPiedraPierdeConPapel() {
 		assertEquals(-1, piedra.comparar(papel));
-		assertEquals("piedra pierdió con papel", piedra.getDescripcionResultado()
+		assertEquals("piedra perdió con papel", piedra.getDescripcionResultado()
 													  .toLowerCase());
 	}
 	@Test
 	void testCompararPiedraPierdeConSpock() {
 		assertEquals(-1, piedra.comparar(spock));
-		assertEquals("piedra pierdió con spock", piedra.getDescripcionResultado()
+		assertEquals("piedra perdió con spock", piedra.getDescripcionResultado()
 													  .toLowerCase());
 	}
 	
